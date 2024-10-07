@@ -1,11 +1,15 @@
-package interfacesusuario;
+package presentacion;
 
-import basedatos.RecepcionDatos;
+import basedatos.ComunicacionBaseDatos;
 import buscadorpeliculas.ConsultaAPI;
+import modelos.Pelicula;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Menu {
+    private static Pelicula pelicula = null;
+    private static String peliculaConsultada = "";
+
     public static void menuPrincipal() {
         Scanner sc = new Scanner(System.in);
         int eleccionUsuario = -1;
@@ -13,7 +17,7 @@ public class Menu {
                       \n::::::::::::::::::::: Bienvenido a ScreenMatch ::::::::::::::::::::::::
                             1. Buscar una pelicula.
                             2. Ver mis peliculas consultadas (Ultimas 10).
-                            3. Mis pellculas favoritas.
+                            3. Mis peliculas favoritas.
                             0. Salir
                       """;
         System.out.println(menu);
@@ -84,8 +88,7 @@ public class Menu {
                         System.exit(0);
                         break;
                     case 1:
-                        // Pendiente por enviar el objeto pelicula para guardarlo en base de datos.
-                        //RecepcionDatos.agregarPeliculasFavoritas();
+                        ComunicacionBaseDatos.agregarPeliculasFavoritas(Menu.pelicula);
                         break;
                     case 2:
                         buscarPeliculas();
@@ -101,11 +104,51 @@ public class Menu {
         }
     }
 
-    private static void verPeliculasConsultadas() {
+    public static void recibirPeliculaConsultada(Pelicula pelicula, String peliculaConsultada) {
+        Menu.pelicula = pelicula;
+        Menu.peliculaConsultada = peliculaConsultada;
+    }
 
+    private static void verPeliculasConsultadas() {
+        ComunicacionBaseDatos.verPeliculasConsultadas();
     }
 
     private static void misPeliculasFavoritas() {
+        ComunicacionBaseDatos.verPeliculasFavoritas();
 
+        String opciones = """
+                          \n1. Volver al menu principal.
+                          2. Limpiar lista de peliculas favoritas.
+                          0. Salir.
+                          """;
+        Scanner sc = new Scanner(System.in);
+        int eleccionUsuario = -1;
+
+        System.out.println(opciones);
+        System.out.print("Tu eleccion: ");
+
+        try {
+            eleccionUsuario = sc.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("\n***** Recuerda elegir solo entre las opciones disponibles *****");
+            sc.nextLine();
+            menuPrincipal();
+        }
+
+        switch (eleccionUsuario) {
+            case 0:
+                System.exit(0);
+                break;
+            case 1:
+                Menu.menuPrincipal();
+                break;
+            case 2:
+                ComunicacionBaseDatos.limpiarPeliculasFavoritas();
+                break;
+            default:
+                System.out.println("\nSolo puedes elegir entre las opciones disponibles.");
+                Menu.menuPrincipal();
+                break;
+        }
     }
 }

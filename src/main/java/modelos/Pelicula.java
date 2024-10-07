@@ -1,4 +1,4 @@
-package buscadorpeliculas;
+package modelos;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -20,7 +20,7 @@ public record Pelicula(
                "\nTitulo: " + titulo +
                "\nAño: " + año +
                "\nFecha publicacion: " + fechaPublicacion +
-               "\nDuracion: " + fechaPublicacion +
+               "\nDuracion: " + duracion +
                "\nGenero: " + genero +
                "\nDirector: " + director +
                "\nEscritor: " + escritor +

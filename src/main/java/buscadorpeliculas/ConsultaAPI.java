@@ -2,7 +2,8 @@ package buscadorpeliculas;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import interfacesusuario.Menu;
+import presentacion.Menu;
+import modelos.Pelicula;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -44,6 +45,10 @@ public class ConsultaAPI extends DatosAutenticacion {
                 // Agregar la respuesta a nuestra lista de peliculas consultadas para posteriormente
                 // agregarlas a un archivo .txt
                 listaPeliculas.add(pelicula);
+
+                // Enviar el objeto pelicula a la clase Menu, para posteriormente almacenarla
+                // en la base de datos.
+                Menu.recibirPeliculaConsultada(pelicula, peliculaConsultada);
 
                 // Imprimir la respuesta
                 System.out.println(pelicula);
