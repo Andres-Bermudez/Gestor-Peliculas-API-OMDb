@@ -29,23 +29,24 @@ envio a otras personas.
 
 ### Objetivos del proyecto:
 1. Poner en practica los conocimientos adquiridos en la primera formacion
-   del programa ONE sobre desarrollo backend con Java.<br><br>
+   del programa ONE sobre desarrollo backend con Java.
 
-2. Crear un proyecto a partir de lo aprendido.<br><br>
+2. Crear un proyecto a partir de lo aprendido.
 
 3. Hacer consumo de una API y utilizar los datos obtenidos en una aplicacion 
-   desarrollada en Java.<br><br>
+   desarrollada en Java.
 
 4. Trabajar con librerias externas y hacer uso de Maven como gestor de 
-   dependencias para Java.<br><br>
+   dependencias para Java.
 
 5. Trabajar con datos en formato JSON haciendo uso de la libreria Gson y 
    convertirlos en objetos soportados en Java, para posteriormente enviarlos
-   a una base de datos en PostgreSQL.<br><br>
+   a una base de datos en PostgreSQL.
 
 6. Conocer mejor el protocolo HTTP y sus metodos(GET - POST - PUT - DELETE).
 
 - Estructura del proyecto:
+
   ![Consultando Pelicula](./imagenes/EstructuraProyecto.png)
 
 ### Tecnologias utilizadas:
