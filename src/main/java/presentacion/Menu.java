@@ -16,7 +16,7 @@ public class Menu {
         String menu = """
                       \n::::::::::::::::::::: Bienvenido a ScreenMatch ::::::::::::::::::::::::
                             1. Buscar una pelicula.
-                            2. Ver mis peliculas consultadas (Ultimas 10).
+                            2. Ver mis peliculas consultadas.
                             3. Mis peliculas favoritas.
                             0. Salir
                       """;
@@ -145,14 +145,13 @@ public class Menu {
     }
 
     public static void recibirPeliculaConsultada(Pelicula pelicula, String peliculaConsultada) {
+        Menu.pelicula = pelicula;
+        Menu.peliculaConsultada = peliculaConsultada;
         ComunicacionBaseDatos.almacenarPeliculasConsultadas(pelicula, peliculaConsultada);
     }
 
     private static void verPeliculasConsultadas() {
         ComunicacionBaseDatos.verPeliculasConsultadas();
-    }
-
-    public static String getPeliculaConsultada() {
-        return peliculaConsultada;
+        Menu.menuPrincipal();
     }
 }

@@ -147,7 +147,7 @@ public class ComunicacionBaseDatos {
             preparedStatement.setString(10, pelicula.pais());
             preparedStatement.setString(11, pelicula.imagen());
 
-            int rowsInserted = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
             System.out.println("\nError: No se pudo almecenar esta consulta.");
@@ -171,7 +171,7 @@ public class ComunicacionBaseDatos {
             statement = connection.createStatement();
 
             // Ejecutar la consulta
-            String sql = "SELECT * FROM peliculas_consultadas LIMIT 10;";
+            String sql = "SELECT * FROM peliculas_consultadas;";
             resultSet = statement.executeQuery(sql);
 
             // Mostrar los datos

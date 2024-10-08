@@ -54,7 +54,7 @@ public class ConsultaAPI extends DatosAutenticacion {
                 System.out.println(pelicula);
 
                 // Generar un archivo .txt con las peliculas consultadas.
-                FileWriter fileWriter = new FileWriter("almacenamiento/peliculasConsultadas.txt");
+                FileWriter fileWriter = new FileWriter("almacenamiento/ultimasPeliculasConsultadas.txt");
                 fileWriter.write(gson.toJson(listaPeliculas));
                 fileWriter.close();
             } else {
