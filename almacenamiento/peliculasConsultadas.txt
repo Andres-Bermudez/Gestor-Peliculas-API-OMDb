@@ -1,14 +1,3 @@
 [
-  {
-    "Title": "Matrix",
-    "Year": "1993",
-    "Released": "01 Mar 1993",
-    "Runtime": "60 min",
-    "Genre": "Action, Drama, Fantasy",
-    "Director": "N/A",
-    "Writer": "Grenville Case",
-    "Actors": "Nick Mancuso, Phillip Jarrett, Carrie-Anne Moss",
-    "Country": "Canada",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BM2JiZjU1NmQtNjg1Ni00NjA3LTk2MjMtNjYxMTgxODY0NjRhXkEyXkFqcGc@._V1_SX300.jpg"
-  }
+  {}
 ]

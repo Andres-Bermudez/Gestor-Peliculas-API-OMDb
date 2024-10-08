@@ -7,7 +7,6 @@ import java.sql.SQLException;
 public class ConexionPostgreSQL {
 
     public Connection conexionBaseDatos() {
-
         // URL de conexión
         String url = "jdbc:postgresql://localhost:5432/gestorpeliculasomdb";
         String user = "arsenius";

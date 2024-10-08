@@ -104,15 +104,6 @@ public class Menu {
         }
     }
 
-    public static void recibirPeliculaConsultada(Pelicula pelicula, String peliculaConsultada) {
-        Menu.pelicula = pelicula;
-        Menu.peliculaConsultada = peliculaConsultada;
-    }
-
-    private static void verPeliculasConsultadas() {
-        ComunicacionBaseDatos.verPeliculasConsultadas();
-    }
-
     private static void misPeliculasFavoritas() {
         ComunicacionBaseDatos.verPeliculasFavoritas();
 
@@ -144,11 +135,24 @@ public class Menu {
                 break;
             case 2:
                 ComunicacionBaseDatos.limpiarPeliculasFavoritas();
+                Menu.menuPrincipal();
                 break;
             default:
                 System.out.println("\nSolo puedes elegir entre las opciones disponibles.");
                 Menu.menuPrincipal();
                 break;
         }
+    }
+
+    public static void recibirPeliculaConsultada(Pelicula pelicula, String peliculaConsultada) {
+        ComunicacionBaseDatos.almacenarPeliculasConsultadas(pelicula, peliculaConsultada);
+    }
+
+    private static void verPeliculasConsultadas() {
+        ComunicacionBaseDatos.verPeliculasConsultadas();
+    }
+
+    public static String getPeliculaConsultada() {
+        return peliculaConsultada;
     }
 }
