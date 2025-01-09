@@ -3,33 +3,81 @@
 ![Consultando Pelicula](./imagenes/ConsultandoPelicula.png)
 
 ### Descripcion:
-Este sistema permite la búsqueda y gestión de películas a través de la API 
-de OMDb (https://www.omdbapi.com/). Forma parte de la especialización en 
-desarrollo backend con Java del programa ONE (Oracle Next Education).
+🎬 Sistema de Gestión y Búsqueda de Películas:
 
-El sistema permite buscar múltiples títulos disponibles en la API y acceder
-a la información detallada de cada película. Además, ofrece la opción de 
-agregar películas a una lista de favoritos, la cual se almacena en una base
-de datos diseñada en PostgreSQL. Los usuarios pueden modificar esta lista
-desde el menú del sistema.
+Este sistema permite la 📡 búsqueda y gestión de películas a 
+través de la API de OMDb, formando parte de la especialización
+en desarrollo backend con Java del programa ONE
+(Oracle Next Education).
 
-La base de datos también guarda un registro de todas las consultas 
-realizadas. Como funcionalidad adicional, el sistema genera un archivo .txt
-que contiene las películas consultadas en formato JSON, facilitando su 
-envio a otras personas.
+🔍 Características principales:
+
+🎞️ Búsqueda de múltiples títulos disponibles en la API con 
+acceso a información detallada de cada película.
+
+⭐ Posibilidad de agregar películas a una lista de favoritos,
+almacenada en una base de datos diseñada en PostgreSQL 🗄️.
+
+✏️ Los usuarios pueden modificar su lista de favoritos
+directamente desde el menú del sistema.
+
+📊 Gestión de datos y exportación:
+
+🗃️ La base de datos registra automáticamente todas las consultas
+realizadas.
+
+📄 Como funcionalidad adicional, el sistema genera un archivo 
+.txt con las películas consultadas en formato JSON 📦, 
+facilitando su intercambio con otras personas.
+
+🚀 Un proyecto ideal para reforzar habilidades en desarrollo 
+backend con Java, gestión de APIs y manejo de bases de datos.
 
 - Peliculas favoritas:
 ![Consultando Pelicula](./imagenes/PeliculasFavoritas.png)
 
 - Peliculas consultadas:
-  ![Consultando Pelicula](./imagenes/PeliculasConsultadas.png)
+![Consultando Pelicula](./imagenes/PeliculasConsultadas.png)
 
 - Archivo generado .txt con las peliculas consultadas:
-  ![Consultando Pelicula](./imagenes/ArchivoTXTPeliculasConsultadas.png)
+![Consultando Pelicula](./imagenes/ArchivoTXTPeliculasConsultadas.png)
+
+## Lo que aprendí con este proyecto:
+Este proyecto me permitió desarrollar y fortalecer diversas 
+habilidades clave en el desarrollo backend con Java:
+
+☕ Java y Backend: Profundicé en la creación de aplicaciones
+backend robustas, implementando un sistema con múltiples 
+funcionalidades.
+
+📡 Consumo de APIs REST: Aprendí a realizar peticiones HTTP a
+la API de OMDb, manejar respuestas JSON y presentar la
+información de manera estructurada.
+
+🗄️ Bases de Datos con PostgreSQL: Mejoré mis habilidades en
+diseño y gestión de bases de datos relacionales, incluyendo 
+la persistencia de datos y registros de actividad.
+
+⭐ Gestión de Favoritos: Implementé la funcionalidad de agregar,
+modificar y almacenar favoritos de manera eficiente, aplicando
+buenas prácticas de manipulación de datos.
+
+📦 Generación y Exportación de Archivos: Incorporé la
+generación de archivos .txt en formato JSON para facilitar 
+la exportación e intercambio de información.
+
+🛠️ Buenas Prácticas y Organización del Código: Practiqué la
+separación de responsabilidades, modularidad y uso de menús 
+interactivos para mejorar la experiencia del usuario.
+
+🚀 Este proyecto no solo reforzó mis habilidades técnicas,
+sino también mi capacidad para desarrollar soluciones completas
+y funcionales, aplicando buenas prácticas y herramientas 
+modernas del desarrollo backend.
 
 ### Objetivos del proyecto:
-1. Poner en practica los conocimientos adquiridos en la primera formacion
-   del programa ONE sobre desarrollo backend con Java.
+1. Poner en practica los conocimientos adquiridos en la primera
+formacion del programa ONE sobre desarrollo backend con Java.
 
 2. Crear un proyecto a partir de lo aprendido.
 
